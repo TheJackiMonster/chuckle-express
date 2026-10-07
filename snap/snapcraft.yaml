@@ -61,7 +61,7 @@ parts:
   chuckle-express:
     plugin: dump
     source: https://github.com/thejackimonster/chuckle-express.git
-    source-tag: v1.0.0
+    source-tag: v1.0.0-fix-license
     build-packages:
       - git-lfs
     stage-packages:
@@ -77,7 +77,7 @@ parts:
           cp bin/chuckle-express-demo.x86_64 $CRAFT_PRIME/usr/bin/chuckle-express
           ;;
         arm64)
-          cp bin/chuckle-express-demo.arm64 $CRAFT_PRIME/usr/bin/chuckle-express
+          cp bin/chuckle-express-demo.aarch64 $CRAFT_PRIME/usr/bin/chuckle-express
           ;;
         *)
           echo "Unsupported architecture: $SNAP_ARCH" >&2
