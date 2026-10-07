@@ -86,5 +86,4 @@ parts:
       esac
       mkdir -p $CRAFT_PRIME/usr/share
       cp -r share $CRAFT_PRIME/usr/
-      cp share/applications/de.thejackimonster.ChuckleExpress.desktop $CRAFT_PROJECT_DIR/snap/chuckle-express.desktop
 
