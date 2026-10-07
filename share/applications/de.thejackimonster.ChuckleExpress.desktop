@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Chuckle Express
+Comment=Drive a train through everyday capitalism
+TryExec=chuckle-express
+Exec=chuckle-express
+Icon=de.thejackimonster.ChuckleExpress
+Terminal=false
+StartupWMClass=ChuckleExpress
+Type=Application
+Categories=Game;
+Keywords=chuckle-express;chuckle;express;train;de.thejackimonster.ChuckleExpress;
+X-Purism-FormFactor=Workstation;Mobile;

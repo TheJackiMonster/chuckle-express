@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2026 Tobias Frisch -->
+<component type="desktop">
+	<id>de.thejackimonster.ChuckleExpress</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>LicenseRef-proprietary</project_license>
+	<content_rating type="oars-1.1">
+		<content_attribute id="violence-cartoon">intense</content_attribute>
+		<content_attribute id="violence-bloodshed">moderate</content_attribute>
+		<content_attribute id="language-profanity">moderate</content_attribute>
+		<content_attribute id="language-humor">intense</content_attribute>
+	</content_rating>
+
+	<developer id="de.thejackimonster">
+		<name>Tobias Frisch</name>
+	</developer>
+
+	<name>Chuckle Express</name>
+	<summary>Drive a train through everyday capitalism</summary>
+	<description>
+		<p><b>A bloody path behind you</b></p>
+
+		<p>In the world of Chuckle Express you are the driver of a train commissioned by logistics company. They have built their private tracks everywhere these days and your job is to move whatever is necessary for the society to expand. It's important work for well respected workers. But you might be one of the notorious slackers that are late all the time. If there wouldn't be all these people around you crossing the tracks in front of your train, you wouldn't need to brake and your boss might hate you a little less. Blessed be the day the brakes fell off, giving you nothing but a chuckle while the train keeps rolling...</p>
+
+		<p><b>Gameplay:</b></p>
+
+		<p>As train driver you are able to steer the train across the rails built into the world to find a path to the next station for your requested charges. At times it might be helpful to jump from one rail to another to shorten the time your boss is waiting. Also other trains might be just ahead. So keep your head up.</p>
+
+		<p>It's a classical endless-runner that offers you to beat current high scores as in other arcade games. However the high score to beat comes with a twist.</p>
+
+		<p><b>Cross-Platform:</b></p>
+
+		<p>The game can be played with keyboard, mouse, touchscreen or gamepad. It is explicitly implemented to be playable across a wide range of display resolutions and input devices. You generally only control the train to the left or right while it rolls ahead.</p>
+
+		<p><b>Mature Content Description</b></p>
+
+		<p>The developers describe the content like this:</p>
+
+		<p><i>The game is using stylistic art to display a lot of violence containing blood in cases trains collide with people, barriers or other trains. Players can dodge these obstacles if preferred. It's up for the player to decide which track they choose... think of it like the trolley problem in a very graphical form.</i></p>
+	</description>
+
+	<supports>
+		<control>pointing</control>
+		<control>keyboard</control>
+		<control>touch</control>
+		<control>gamepad</control>
+	</supports>
+
+	<screenshots>
+		<screenshot type="default">
+			<caption>Screenshot of the game during fresh run</caption>
+			<image>https://raw.githubusercontent.com/TheJackiMonster/chuckle-express/main/screenshots/screenshot-0.png</image>
+		</screenshot>
+		<screenshot>
+			<caption>Screenshot of first bloody collision in the game</caption>
+			<image>https://raw.githubusercontent.com/TheJackiMonster/chuckle-express/main/screenshots/screenshot-1.png</image>
+		</screenshot>
+		<screenshot>
+			<caption>Screenshot of train drifting in the game</caption>
+			<image>https://raw.githubusercontent.com/TheJackiMonster/chuckle-express/main/screenshots/screenshot-2.png</image>
+		</screenshot>
+		<screenshot>
+			<caption>Screenshot of trains dodging eachother through curves</caption>
+			<image>https://raw.githubusercontent.com/TheJackiMonster/chuckle-express/main/screenshots/screenshot-3.png</image>
+		</screenshot>
+		<screenshot>
+			<caption>Screenshot of the game with map overview opened</caption>
+			<image>https://raw.githubusercontent.com/TheJackiMonster/chuckle-express/main/screenshots/screenshot-4.png</image>
+		</screenshot>
+	</screenshots>
+
+	<url type="homepage">https://thejackimonster.itch.io/chuckle-express</url>
+	<url type="contact">https://thejackimonster.de/contact</url>
+
+	<update_contact>jacki_at_thejackimonster.de</update_contact>
+
+	<launchable type="desktop-id">de.thejackimonster.ChuckleExpress.desktop</launchable>
+
+	<releases>
+		<release version="1.0.0" date="2026-09-24">
+			<description>
+			  <p>It has been a long time since I started developing Chuckle Express but now it's finally finished. With the release of version 1.0.0 there is a free demo available which leaves out a few features like the character creator, local multiplayer, achievements and a score board over multiple runs. So if you enjoy the demo and want to support my work, feel free to buy the full version.</p>
+
+				<p>I've put a lot of work into optimization for many different platforms and hardware configurations. Let me know if anything might not work as expected. Every feedback is welcome, no matter how critical. Enjoy the game!</p>
+			</description>
+			<url>https://thejackimonster.itch.io/chuckle-express/devlog/1675020/chuckle-express-release</url>
+		</release>
+	</releases>
+
+	<branding>
+		<color type="primary" scheme_preference="light">#FFFFFF</color>
+		<color type="primary" scheme_preference="dark">#111111</color>
+	</branding>
+</component>

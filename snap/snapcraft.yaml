@@ -1,0 +1,80 @@
+name: chuckle-express
+version: 1.0.0
+license: "Proprietary"
+title: Chuckle Express
+summary: Drive a train through everyday capitalism
+description: |
+  A bloody path behind you
+
+  In the world of Chuckle Express you are the driver of a train commissioned by logistics company. They have built their private tracks everywhere these days and your job is to move whatever is necessary for the society to expand. It's important work for well respected workers. But you might be one of the notorious slackers that are late all the time. If there wouldn't be all these people around you crossing the tracks in front of your train, you wouldn't need to brake and your boss might hate you a little less. Blessed be the day the brakes fell off, giving you nothing but a chuckle while the train keeps rolling...
+
+  Gameplay:
+
+  As train driver you are able to steer the train across the rails built into the world to find a path to the next station for your requested charges. At times it might be helpful to jump from one rail to another to shorten the time your boss is waiting. Also other trains might be just ahead. So keep your head up.
+
+  It's a classical endless-runner that offers you to beat current high scores as in other arcade games. However the high score to beat comes with a twist.
+
+  Cross-Platform:
+
+  The game can be played with keyboard, mouse, touchscreen or gamepad. It is explicitly implemented to be playable across a wide range of display resolutions and input devices. You generally only control the train to the left or right while it rolls ahead.
+
+  Mature Content Description
+
+  The developers describe the content like this:
+
+  The game is using stylistic art to display a lot of violence containing blood in cases trains collide with people, barriers or other trains. Players can dodge these obstacles if preferred. It's up for the player to decide which track they choose... think of it like the trolley problem in a very graphical form.
+website:
+  - https://thejackimonster.itch.io/chuckle-express
+contact:
+  - contact@thejackimonster.de
+adopt-info: chuckle-express
+icon: share/icons/hicolor/scalable/apps/de.thejackimonster.ChuckleExpress.svg
+base: core24
+confinement: strict
+grade: stable
+
+platforms:
+  amd64:
+    build-on: [amd64]
+    build-for: [amd64]
+  arm64:
+    build-on: [arm64]
+    build-for: [arm64]
+
+slots:
+  chuckle-express:
+    interface: dbus
+    bus: session
+    name: de.thejackimonster.ChuckleExpress
+
+apps:
+  chuckle-express:
+    command: usr/bin/chuckle-express
+    plugs:
+      - home
+      - audio-playback
+    desktop: usr/share/applications/de.thejackimonster.ChuckleExpress.desktop
+    common-id: de.thejackimonster.ChuckleExpress
+
+parts:
+  chuckle-express:
+    plugin: dump
+    source: git+https://github.com/thejackimonster/chuckle-express.git
+    source-tag: v1.0.0
+    organize: |
+      #!/bin/sh
+      case "$SNAP_ARCH" in
+        amd64)
+          cp "$SNAPCRAFT_PART_SRC/bin/chuckle-express-demo.x86_64" "$SNAPCRAFT_PART_INSTALL/usr/bin/chuckle-express"
+          ;;
+        arm64)
+          cp "$SNAPCRAFT_PART_SRC/bin/chuckle-express-demo.arm64" "$SNAPCRAFT_PART_INSTALL/usr/bin/chuckle-express"
+          ;;
+        *)
+          echo "Unsupported architecture: $SNAP_ARCH" >&2
+          exit 1
+          ;;
+      esac
+    override-prime: |
+      cd $CRAFT_PART_INSTALL
+      cp -r share $CRAFT_PRIME/usr/share
