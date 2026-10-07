@@ -1,6 +1,5 @@
 name: chuckle-express
 version: 1.0.0
-license: "Proprietary"
 title: Chuckle Express
 summary: Drive a train through everyday capitalism
 description: |
@@ -50,31 +49,42 @@ slots:
 apps:
   chuckle-express:
     command: usr/bin/chuckle-express
+    extensions: [gnome]
     plugs:
       - home
       - audio-playback
-    desktop: usr/share/applications/de.thejackimonster.ChuckleExpress.desktop
+      - opengl
+    desktop: chuckle-express.desktop
     common-id: de.thejackimonster.ChuckleExpress
 
 parts:
   chuckle-express:
     plugin: dump
-    source: git+https://github.com/thejackimonster/chuckle-express.git
+    source: https://github.com/thejackimonster/chuckle-express.git
     source-tag: v1.0.0
-    organize: |
-      #!/bin/sh
+    build-packages:
+      - git-lfs
+    stage-packages:
+      - git-lfs
+    override-build: |
+      snapcraftctl build
+      git lfs pull
+    override-prime: |
+      cd $CRAFT_PART_INSTALL
+      mkdir -p $CRAFT_PRIME/usr/bin
       case "$SNAP_ARCH" in
         amd64)
-          cp "$SNAPCRAFT_PART_SRC/bin/chuckle-express-demo.x86_64" "$SNAPCRAFT_PART_INSTALL/usr/bin/chuckle-express"
+          cp bin/chuckle-express-demo.x86_64 $CRAFT_PRIME/usr/bin/chuckle-express
           ;;
         arm64)
-          cp "$SNAPCRAFT_PART_SRC/bin/chuckle-express-demo.arm64" "$SNAPCRAFT_PART_INSTALL/usr/bin/chuckle-express"
+          cp bin/chuckle-express-demo.arm64 $CRAFT_PRIME/usr/bin/chuckle-express
           ;;
         *)
           echo "Unsupported architecture: $SNAP_ARCH" >&2
           exit 1
           ;;
       esac
-    override-prime: |
-      cd $CRAFT_PART_INSTALL
-      cp -r share $CRAFT_PRIME/usr/share
+      mkdir -p $CRAFT_PRIME/usr/share
+      cp -r share $CRAFT_PRIME/usr/
+      cp share/applications/de.thejackimonster.ChuckleExpress.desktop $CRAFT_PROJECT_DIR/snap/chuckle-express.desktop
+
