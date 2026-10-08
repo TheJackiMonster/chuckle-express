@@ -1,5 +1,5 @@
 name: chuckle-express
-version: 1.0.0
+version: 1.0.1
 title: Chuckle Express Demo
 summary: Drive a train through everyday capitalism
 description: |
@@ -61,7 +61,7 @@ parts:
   chuckle-express:
     plugin: dump
     source: https://github.com/thejackimonster/chuckle-express.git
-    source-tag: v1.0.0-fix-license
+    source-tag: v1.0.1
     build-packages:
       - git-lfs
     stage-packages:
