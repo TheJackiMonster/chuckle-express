@@ -94,6 +94,13 @@
 	<launchable type="desktop-id">de.thejackimonster.ChuckleExpress.desktop</launchable>
 
 	<releases>
+		<release version="1.0.1" date="2026-10-08">
+			<description>
+				<p>During the first two weeks after release I've collected a list of issues and bugs being encountered and fixed most of them, bringing a new release with version 1.0.1. For example you can forward the intro sequence now instead of only skipping it, other sequences will contain less beards in crowds of people, slow motion will not interfere with runs afterwards causing the train to get slower, quest texts in the UI should be correct now (all the time) and more.</p>
+
+				<p>Additionally I have some ideas for future changes, potentially bringing new features as well. Enjoy the game!</p>
+			</description>
+		</release>
 		<release version="1.0.0" date="2026-09-24">
 			<description>
 			  <p>It has been a long time since I started developing Chuckle Express but now it's finally finished. With the release of version 1.0.0 there is a free demo available which leaves out a few features like the character creator, local multiplayer, achievements and a score board over multiple runs. So if you enjoy the demo and want to support my work, feel free to buy the full version.</p>
