@@ -63,6 +63,15 @@
 		<control>gamepad</control>
 	</supports>
 
+	<recommends>
+		<display_length compare="ge">1280</display_length>
+	</recommends>
+
+	<requires>
+		<display_length compare="ge">360</display_length>
+		<display_length compare="le">3840</display_length>
+	</requires>
+
 	<screenshots>
 		<screenshot type="default">
 			<caption>Screenshot of the game during fresh run</caption>
@@ -88,6 +97,8 @@
 
 	<url type="homepage">https://thejackimonster.itch.io/chuckle-express</url>
 	<url type="contact">https://thejackimonster.de/contact</url>
+	<url type="bugtracker">https://github.com/TheJackiMonster/chuckle-express/issues</url>
+	<url type="donation">https://ko-fi.com/thejackimonster</url>
 
 	<update_contact>jacki_at_thejackimonster.de</update_contact>
 
